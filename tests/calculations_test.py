@@ -53,20 +53,24 @@ def test_get_nth_fibonacci_one():
 
     # Act
     result = get_nth_fibonacci(n)
-def test_get_nth_fibonacci_ten():
- """Test with n=10."""
- # Arrange
- n = 10
 
- # Act
- result = get_nth_fibonacci(n)
-
- # Assert
- assert result == 89
     # Assert
-    assert result == 1
+    assert result == 1  # 修复：将Assert块归到函数内，修正缩进
 
 
+def test_get_nth_fibonacci_ten():
+    """Test with n=10."""
+    # Arrange
+    n = 10
+
+    # Act
+    result = get_nth_fibonacci(n)
+
+    # Assert
+    assert result == 89  # 修复：统一缩进格式，修正字符串注释的引号问题
+
+
+# 以下是你注释掉的冗余代码，保留但建议删除（不影响运行）
 # def test_get_nth_fibonacci_ten():
 #     """Test with n=10."""
 #     # Arrange
